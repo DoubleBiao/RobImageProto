@@ -3,20 +3,6 @@
 import socket
 import numpy as np
 
-#s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-#host ="0.0.0.0"
-#port =6666
-#s.connect((host,port))
-#
-#def send_data(datatosend):
-#   s.send(datatosend) 
-#
-#
-#rawdata = np.arange(10,dtype=np.int).tobytes()
-#send_data(rawdata)
-#s.close ()
-#
-
 class ImageSender:
     def __init__(self, host, port):
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
