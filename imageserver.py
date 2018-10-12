@@ -6,6 +6,7 @@ import sys
 import numpy as np
 import struct
 import pickle
+import sys
 
 class RobProtoServer:
     def __init__(self,host,port,tot_socket):
@@ -73,5 +74,9 @@ class RobProtoServer:
             s.close()
 
 if __name__ == "__main__":
-    server = RobProtoServer('127.0.0.1',6666,2)
+    ipaddress = ""
+    startport = int(sys.argv[1])
+    portnum = int(sys.argv[2])
+    print("set up",portnum,"ports, start from:",startport)
+    server = RobProtoServer(ipaddress,startport,portnum)
     server.setup()
